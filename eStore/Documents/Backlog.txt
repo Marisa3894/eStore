@@ -1,0 +1,79 @@
+SETUP:
+
+New ASP.NET Web API Project
+
+_ViewStart.cshtml
+	comment out layout
+
+App_Start / RouteConfig.cs 
+	update url to: "{*page}"
+
+Site.css
+	Add: [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important;}
+
+NuGet Import:
+	AngularJSCore
+	AngularJSResource
+	AngularJSRoute
+	AngularJS UI Bootstrap
+
+Models:
+	Products.cs
+		Enter product properties
+	IdentityModels.cs (line 28)
+		public IDbSet<Product> Products { get; set; }
+
+API folder:
+	 ProductsController.cs - add:
+		ApplicationDbContext
+		IList / return
+
+Folders:
+	ng-Views
+		master.html
+	ng-Apps
+		app.js - add:
+			routing to master partial page
+		controllers.js - add:
+			MasterController w/Product query	
+
+
+Views / Home / Index.html - clear existing, then add:
+	html:
+		to html tag:  ng-app="StoreApp"
+		after title tag:  <base href="/" /> (for partial page routing)
+		to body tag: ng-controller="MasterController as main"
+		to div tag: ng-view class="view" (insertion point for partial pages)
+	css:
+		bootstrap.min.css
+		ui-bootstrap-csp.css
+		Site.css
+	script:
+		angular.min.js
+		angular-route.min.js
+		angular-resource.min.js
+		angular-ui/ui-bootstrap-tpls.min.js
+		app.js
+		controllers.js		
+
+
+
+Package Manager Console: 
+	Enable-Migration
+
+Migration / Configuration.cs - add:
+	Product Seed Data
+
+Package Manager Console:
+	Add Migration
+	Update-database
+
+
+
+
+
+
+	
+	
+
+
