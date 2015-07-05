@@ -1,15 +1,8 @@
-AngularJs
-New mvc project w/Web API
-new folder ngApps
-new js file: app.js
-NuGet - AngularJS Core
-app.js - create js application
-	selfclosing function
-	modules - 2 references ('1st', [] any other)
-app.js - create client side controller (js file)
-this. creates reference to model
-Index - edits
 
-add scripts
+Issue:  product list data did not populate on web page. 
+	Resolution:  update App_Start/WebApiConfig to add Json formatter:
+
+	// changes Pascal C# classes and serializes into Json camelCase format
+        config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver(); 
 
 

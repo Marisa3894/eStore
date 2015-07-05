@@ -1,7 +1,7 @@
 ﻿(function () {
 
     angular.module('StoreApp', ['ngResource', 'ngRoute', 'ui.bootstrap'])
-        .constant('PROD_API', '/api/products/:id')
+        .constant('PROD_API', '/api/products/')
         .config(function ($routeProvider, $locationProvider) {
 
             $routeProvider

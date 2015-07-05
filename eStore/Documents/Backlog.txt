@@ -5,8 +5,12 @@ New ASP.NET Web API Project
 _ViewStart.cshtml
 	comment out layout
 
-App_Start / RouteConfig.cs 
-	update url to: "{*page}"
+App_Start
+	RouteConfig.cs:
+		update url to: "{*page}"
+	WebApiConfig.cs:
+		// changes Pascal C# classes and serializes into Json camelCase format
+        config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
 Site.css
 	Add: [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important;}
