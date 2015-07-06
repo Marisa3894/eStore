@@ -3,8 +3,8 @@
     angular.module('StoreApp').controller('MasterController', function (PROD_API, $resource, $location) {
         var self = this;
 
-        var Product = $resource(PROD_API);
-        self.products = Product.query();
+        //var Product = $resource(PROD_API);
+        //self.products = Product.query();
 
     });
 
@@ -13,6 +13,20 @@
 
         var Product = $resource(PROD_API);
         self.products = Product.query();
+
+        self.reveal = false;
+
+        // query products list
+        var Product = $resource(PROD_API);
+        Product.query().$promise.then(function (data) {
+            // on success; / back from the server
+            self.reveal = true;
+            self.products = data;
+        },
+        function () {
+            // on error
+            console.log("error");
+        });
     });
 
     angular.module('StoreApp').controller('AddController', function (PROD_API, $resource, $routeParams, $location) {
@@ -65,5 +79,5 @@
         }
     });
 
-
 })();
+

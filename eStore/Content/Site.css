@@ -42,6 +42,13 @@ textarea {
     padding-right: 15px;
 }
 
+.mjr-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+}
+
 
 /*<<=== CLASSES ===>>*/
 

@@ -60,8 +60,6 @@ Views / Home / Index.html - clear existing, then add:
 		app.js
 		controllers.js		
 
-
-
 Package Manager Console: 
 	Enable-Migration
 
@@ -94,6 +92,17 @@ list.html:
 Apply bootswatch theme
 
 <<======>>
+
+LOAD SPINNER for Products > list.html
+
+<<======>>
+	
+
+
+
+
+
+
 
 
 

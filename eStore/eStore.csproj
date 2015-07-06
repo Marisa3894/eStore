@@ -229,6 +229,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\loadspinner.gif" />
     <Content Include="ngApps\app.js" />
     <Content Include="ngApps\controllers.js" />
     <Content Include="ngViews\add.html" />
