@@ -10,7 +10,7 @@ App_Start
 		update url to: "{*page}"
 	WebApiConfig.cs:
 		// changes Pascal C# classes and serializes into Json camelCase format
-        config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            	config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
 Site.css
 	Add: [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak { display: none !important;}
@@ -71,6 +71,32 @@ Migration / Configuration.cs - add:
 Package Manager Console:
 	Add Migration
 	Update-database
+
+<<======>>
+
+PRODUCT LIST:
+
+Create CRUD pages under ngViews:
+	list
+	add
+	details
+	edit
+	delete		
+
+ngApps: 
+	app.js: add routing to each page
+	controllers.js: add controller for each CRUD
+
+list.html:
+	heading orderBy & sortBy
+	productfilter field
+
+Apply bootswatch theme
+
+<<======>>
+
+
+
 
 
 

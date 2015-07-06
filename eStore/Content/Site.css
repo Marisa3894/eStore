@@ -1,12 +1,29 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿/*<<=== HTML ELEMENTS ===>>*/
+
+* {
+    font-family: 'Roboto-condensed', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+body {
+
+}
+
+h2 {
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+img {
+    width: 300px;
+}
+
+/*label {
+    font-size: 18px;
+}*/
+
+tbody img {  /*resizes product list table images*/
+    width: 200px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -15,6 +32,22 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+/*<<=== ID's ===>>*/
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/*<<=== CLASSES ===>>*/
+
+
+
+/*<<=== OTHER ===>>*/
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;

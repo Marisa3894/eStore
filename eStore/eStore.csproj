@@ -221,6 +221,8 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ceruleanStyle.css" />
+    <Content Include="Content\spacelabStyle.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="Documents\Backlog.txt" />
     <Content Include="Documents\Notes.txt" />
@@ -229,6 +231,11 @@
     <Content Include="Global.asax" />
     <Content Include="ngApps\app.js" />
     <Content Include="ngApps\controllers.js" />
+    <Content Include="ngViews\add.html" />
+    <Content Include="ngViews\delete.html" />
+    <Content Include="ngViews\details.html" />
+    <Content Include="ngViews\edit.html" />
+    <Content Include="ngViews\list.html" />
     <Content Include="ngViews\master.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
