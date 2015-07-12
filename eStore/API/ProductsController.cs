@@ -39,6 +39,7 @@ namespace eStore.API
                     original.Fabric = product.Fabric;
                     original.Price = product.Price;
                     original.Description = product.Description;
+                    original.InventoryDate = product.InventoryDate;
                     _db.SaveChanges();
                 }
 

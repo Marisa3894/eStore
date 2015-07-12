@@ -203,9 +203,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201507032149559_initial.cs" />
-    <Compile Include="Migrations\201507032149559_initial.Designer.cs">
-      <DependentUpon>201507032149559_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201507112156489_initial.cs" />
+    <Compile Include="Migrations\201507112156489_initial.Designer.cs">
+      <DependentUpon>201507112156489_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -237,7 +237,9 @@
     <Content Include="ngViews\details.html" />
     <Content Include="ngViews\edit.html" />
     <Content Include="ngViews\list.html" />
-    <Content Include="ngViews\master.html" />
+    <Content Include="ngViews\home.html" />
+    <Content Include="ngViews\login.html" />
+    <Content Include="ngViews\register.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
     <Content Include="Scripts\angular-resource.min.js" />
@@ -312,8 +314,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201507032149559_initial.resx">
-      <DependentUpon>201507032149559_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201507112156489_initial.resx">
+      <DependentUpon>201507112156489_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

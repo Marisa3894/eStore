@@ -5,16 +5,16 @@
         .config(function ($routeProvider, $locationProvider) {
 
             $routeProvider
-            // master is homepage
+            // homepage
                  .when('/', {
-                     templateUrl: '/ngViews/master.html',
-                     controller: 'MasterController',
+                     templateUrl: '/ngViews/home.html',
+                     controller: 'HomeController',
                      controllerAs: 'main'
                  })
 
-                .when('/master', {
-                    templateUrl: '/ngViews/master.html',
-                    controller: 'MasterController',
+                .when('/home', {
+                    templateUrl: '/ngViews/home.html',
+                    controller: 'HomeController',
                     controllerAs: 'main'
                 })
 
@@ -45,6 +45,18 @@
                 .when('/delete/:id', {
                     templateUrl: '/ngViews/delete.html',
                     controller: 'DeleteController',
+                    controllerAs: 'main'
+                })
+
+                .when('/login', {
+                    templateUrl: '/ngViews/login.html',
+                    controller: 'LoginController',
+                    controllerAs: 'main'
+                })
+
+                .when('/register', {
+                    templateUrl: '/ngViews/register.html',
+                    controller: 'RegisterController',
                     controllerAs: 'main'
                 })
 

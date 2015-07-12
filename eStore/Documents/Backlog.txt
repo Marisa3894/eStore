@@ -69,6 +69,7 @@ Migration / Configuration.cs - add:
 Package Manager Console:
 	Add Migration
 	Update-database
+	Confirm seed data in SQL Server Object Explorer
 
 <<======>>
 
@@ -79,7 +80,7 @@ Create CRUD pages under ngViews:
 	add
 	details
 	edit
-	delete		
+	delete	
 
 ngApps: 
 	app.js: add routing to each page
@@ -96,8 +97,76 @@ Apply bootswatch theme
 LOAD SPINNER for Products > list.html
 
 <<======>>
-	
 
+USER DATABASE:	
+	IdentityModels.cs: Add FirstName, LastName properties (line 14)
+	AccountBindingModels.cs:  
+		User properties - add under 'public class RegisterBindingModel'
+			
+	Configuration.cs:
+	(seed data)
+	
+	(claims)
+		var userStore = new UserStore<ApplicationUser>(context);
+        var userManager = new ApplicationUserManager(userStore);
+
+        if (userManager.FindByName(user.UserName) == null) {
+           userManager.Create(user, "Secret123!");
+           userManager.AddClaim(user.Id, new Claim("Admin", "true"));
+        }
+		
+	AccountController (line 389/before Helpers:
+		//GET claims 
+        [Route("GetIsAdmin")]
+        public bool GetIsAdmin ()
+        {
+            var user = this.User.Identity as ClaimsIdentity;
+            return user.HasClaim("Admin", "true");
+        }
+
+		*ALSO add: FirstName = model.FirstName, LastName = model.LastName 
+		to end of:  var user = new ApplicationUser() { UserName = model.Email, Email = model.Email} 
+		
+		**NOTE: cannot test claims until login is setup**
+
+	Package Manager Console:
+		Add Migration
+		Update-database
+		Confirm seed data in SQL Server Object Explorer
+
+<<======>>
+
+LOGIN & REGISTER SETUP
+	Create html pages / links to navbar
+	Add routing to app.js
+	Add login & register to controllers.cs
+		
+
+**Check claims - F12 & login**
+	Enter console log: sessionStorage.getItem
+		Should return "true" when admin is logged in.
+		Should return "null" when user is logged in.
+	
+	To restrict visibility of a link to Admin on menu controller:
+		1st: add this function to the menucontroller to show/hide Admin link on nav bar 
+			self.isAdmin = function () {
+            return sessionStorage.getItem('isAdmin')
+        }			
+		2nd: add to right nav bar to hide Admin link: 
+			<li ng-show="menu.isAdmin()"><a href="~/add">Admin<span class="sr-only">(current)</span></a></li>
+
+	Do same to ProductListController and Edit/Delete links on list.html
+		add: ng-show="main.isAdmin()" to end of a href tag
+
+<<======>>
+
+
+		
+		
+
+
+
+		
 
 
 

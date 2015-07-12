@@ -21,5 +21,7 @@ namespace eStore.Models
 
         public string Description { get; set; }
 
+        public DateTime InventoryDate { get; set; }
+
     }
 }

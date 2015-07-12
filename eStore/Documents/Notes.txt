@@ -1,8 +1,8 @@
 
 Issue:  product list data did not populate on web page. 
 	Resolution:  update App_Start/WebApiConfig to add Json formatter:
-
 	// changes Pascal C# classes and serializes into Json camelCase format
         config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver(); 
 
+Use input ng-submit for forms; ng-click for others
 

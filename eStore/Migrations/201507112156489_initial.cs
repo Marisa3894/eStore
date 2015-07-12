@@ -18,6 +18,7 @@ namespace eStore.Migrations
                         Fabric = c.String(),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Description = c.String(),
+                        InventoryDate = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -49,6 +50,8 @@ namespace eStore.Migrations
                 c => new
                     {
                         Id = c.String(nullable: false, maxLength: 128),
+                        FirstName = c.String(),
+                        LastName = c.String(),
                         Email = c.String(maxLength: 256),
                         EmailConfirmed = c.Boolean(nullable: false),
                         PasswordHash = c.String(),
