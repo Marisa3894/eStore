@@ -23,7 +23,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="product in main.products | filter:productFilter | orderBy:sortBy:reverse">
+        <tr ng-repeat="product in listC.products | filter:productFilter | orderBy:sortBy:reverse">
             <td><img ng-src="{{product.image}}" /></td>
             <td>{{product.name}}</td>
             <td>{{product.fabric}}</td>
@@ -31,14 +31,14 @@
             <td>{{product.price|currency}}</td>
             <td>
                 <a href="/details/{{product.id}}">Details</a>
-                <a href="/edit/{{product.id}}" ng-show="main.isAdmin()"> | Edit</a>
-                <a href="/delete/{{product.id}}" ng-show="main.isAdmin()"> | Delete</a>
+                <a href="/edit/{{product.id}}" ng-show="listC.isAdmin()"> | Edit</a>
+                <a href="/delete/{{product.id}}" ng-show="listC.isAdmin()"> | Delete</a>
             </td>
         </tr>
     </tbody>
 </table>
 
-<div ng-show="!main.reveal">
+<div ng-show="!listC.reveal">
     <img class="mjr-loader" src="../img/loadspinner.gif" />
 </div>
 

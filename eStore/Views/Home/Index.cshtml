@@ -3,12 +3,15 @@
     <title>eStore</title>
     <base href="/" />
 
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/ui-bootstrap-csp.css" rel="stylesheet" />
-    <link href="~/Content/ceruleanStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
+    @*<link href="~/Content/ui-bootstrap-csp.css" rel="stylesheet" />*@
+    <link href="~/Content/bootswatchTheme.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
-<body ng-controller="HomeController as main">
+<body ng-controller="HomeController as homeC">
     
     <!-- Navigation bar -->
     <nav class="navbar navbar-inverse" ng-controller="MenuController as menu">
@@ -29,12 +32,23 @@
                     <li><a href="#">About</a></li>
                     <li><a href="~/list">Product List <span class="sr-only">(current)</span></a></li>
                 </ul>
+                <div class="btn-group" dropdown is-open="status.isopen">
+                    <button id="mjr-adminBtn" ng-show="menu.isAdmin()" type="button" class="btn btn-info dropdown-toggle" dropdown-toggle>
+                        Admin <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="~/add">Add Product</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Users</a></li>
+                    </ul>
+                </div>
 
                 <!-- Login/Register/Admin links -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li ng-show="menu.isAdmin()"><a href="~/add">Admin<span class="sr-only">(current)</span></a></li>
                     <li ng-if="!menu.showLogin()"><a href="~/register">Register</a></li>
-                    <li ng-if="!menu.showLogin()"><a href="~/login">Log in</a></li>
+                    <li ng-if="!menu.showLogin()"><a ng-click="homeC.loginshowLoginModal()">Login</a></li>
                     <li ng-if="menu.showLogin()"><a ng-click="menu.logout()">Log out</a></li>
                 </ul>
             </div>

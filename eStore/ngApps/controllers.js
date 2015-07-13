@@ -1,19 +1,34 @@
 ﻿(function () {
     //HOME CONTROLLER
-    angular.module('StoreApp').controller('HomeController', function (PROD_API, $resource, $location) {
+    angular.module('StoreApp').controller('HomeController', function ($location, $http, $modal) {
         var self = this;
 
+        self.isAdmin = function () {
+            return sessionStorage.getItem('isAdmin')
+        }
 
-
-        //login modal here
+        //LoginController for login modal
+        self.loginshowLoginModal = function () {
+            $modal.open({
+                animation: true,
+                templateUrl: '/ngViews/modal.html',
+                controller: 'LoginController',
+                controllerAs: 'loginC',
+            })
+        };
 
     });
 
-    //LOGIN & CLAIMS CONTROLLER
-    angular.module('StoreApp').controller('LoginController', function ($location, $http) {
+    //USER LOGIN & CLAIMS CONTROLLER
+    angular.module('StoreApp').controller('LoginController', function ($location, $http, $modalInstance ) {
         var self = this;
 
-        //modal here
+        //cancel modal
+        self.template = '/ngViews/login.html'
+        self.cancel = function () {
+            $modalInstance.close('close');
+        };
+        //end cancel modal
 
         self.login = function () {
             var data = "grant_type=password&username=" + self.loginEmail + "&password=" + self.loginPassword;
@@ -30,11 +45,14 @@
                     }
                 })
                 $location.path('/');
+            })
+            .then(function () {
+                $modalInstance.dismiss('cancel')
             });
         }
     });
 
-    //REGISTER CONTROLLER
+    //USER REGISTER CONTROLLER
     angular.module('StoreApp').controller('RegisterController', function ($http, $location) {
         var self = this;
 
@@ -46,7 +64,7 @@
     });
 
     //MENU CONTROLLER FOR NAVIGATION BAR
-    angular.module('StoreApp').controller('MenuController', function ($location, $http) {
+    angular.module('StoreApp').controller('MenuController', function ($location, $http, $log) {
         var self = this;
 
         self.showLogin = function () {
@@ -62,16 +80,12 @@
             sessionStorage.removeItem('isAdmin');
             $location.path('/');
         };
-
     });
 
 
     //LIST
     angular.module('StoreApp').controller('ListController', function (PROD_API, $resource, $location) {
         var self = this;
-
-        var Product = $resource(PROD_API);
-        self.products = Product.query();
 
         self.reveal = false;
 
@@ -146,11 +160,5 @@
             $location.path('/list');
         }
     });
-
-    
-
-    
-
-
 })();
 

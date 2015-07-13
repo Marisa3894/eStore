@@ -46,7 +46,7 @@ Views / Home / Index.html - clear existing, then add:
 	html:
 		to html tag:  ng-app="StoreApp"
 		after title tag:  <base href="/" /> (for partial page routing)
-		to body tag: ng-controller="MasterController as main"
+		to body tag: ng-controller="MasterController as masterC"
 		to div tag: ng-view class="view" (insertion point for partial pages)
 	css:
 		bootstrap.min.css
@@ -147,19 +147,57 @@ LOGIN & REGISTER SETUP
 		Should return "true" when admin is logged in.
 		Should return "null" when user is logged in.
 	
-	To restrict visibility of a link to Admin on menu controller:
-		1st: add this function to the menucontroller to show/hide Admin link on nav bar 
+	Restrict view of Admin button and f a link to Admin on menu controller:
+		1st: add this function to the MenuController and ProductListController to show/hide Admin links 
 			self.isAdmin = function () {
             return sessionStorage.getItem('isAdmin')
         }			
-		2nd: add to right nav bar to hide Admin link: 
-			<li ng-show="menu.isAdmin()"><a href="~/add">Admin<span class="sr-only">(current)</span></a></li>
-
-	Do same to ProductListController and Edit/Delete links on list.html
-		add: ng-show="main.isAdmin()" to end of a href tag
+		Use ng-show="listC.isAdmin()" to list Delete/Edit link tags
 
 <<======>>
 
+LOGIN MODAL:
+	Add modal.html template
+	controllers.js:
+		MASTER/HOME controller:
+		Angular.module to include: $location, $http, $modal, then:
+			//LoginController for login modal
+			//this controller allows login page to continue to function without modal
+			self.loginshowLoginModal = function () {
+				$modal.open({
+					animation: true,
+					templateUrl: '/ngViews/modal.html',
+					controller: 'LoginController',
+					controllerAs: 'lc',
+				})
+			};
+			//end modal section
+
+		LOGIN controller:
+		Angular.module to include: $location, $http, $modalInstance, then:
+			//cancel modal
+			self.template = '/ngViews/login.html'      
+			self.cancel = function () {
+            $modalInstance.close('close');
+			};
+			//end cancel modal
+
+			Add after $location.path('/');
+			})
+            .then(function () {
+                $modalInstance.dismiss('cancel')
+
+		Edit Index.html login link:
+			<li ng-if="!menu.showLogin()"><a ng-click="homeC.loginshowLoginModal()">Login</a></li>
+
+		Site.css:
+			Resize and position logo on modal
+
+
+
+
+		
+		
 
 		
 		

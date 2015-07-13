@@ -1,7 +1,7 @@
 ﻿(function () {
 
     angular.module('StoreApp', ['ngResource', 'ngRoute', 'ui.bootstrap'])
-        .constant('PROD_API', '/api/products/')
+        .constant('PROD_API', '/api/products')
         .config(function ($routeProvider, $locationProvider) {
 
             $routeProvider
@@ -9,55 +9,55 @@
                  .when('/', {
                      templateUrl: '/ngViews/home.html',
                      controller: 'HomeController',
-                     controllerAs: 'main'
+                     controllerAs: 'homeC'
                  })
 
                 .when('/home', {
                     templateUrl: '/ngViews/home.html',
                     controller: 'HomeController',
-                    controllerAs: 'main'
+                    controllerAs: 'homeC'
                 })
 
                 .when('/list', {
                     templateUrl: '/ngViews/list.html',
                     controller: 'ListController',
-                    controllerAs: 'main'
+                    controllerAs: 'listC'
                 })
 
                 .when('/add', {
                     templateUrl: '/ngViews/add.html',
                     controller: 'AddController',
-                    controllerAs: 'main'
+                    controllerAs: 'addC'
                 })
 
                 .when('/details/:id', {
                     templateUrl: '/ngViews/details.html',
                     controller: 'DetailsController',
-                    controllerAs: 'main'
+                    controllerAs: 'detailsC'
                 })
 
                 .when('/edit/:id', {
                     templateUrl: '/ngViews/edit.html',
                     controller: 'EditController',
-                    controllerAs: 'main'
+                    controllerAs: 'editC'
                 })
 
                 .when('/delete/:id', {
                     templateUrl: '/ngViews/delete.html',
                     controller: 'DeleteController',
-                    controllerAs: 'main'
+                    controllerAs: 'deleteC'
                 })
 
                 .when('/login', {
                     templateUrl: '/ngViews/login.html',
                     controller: 'LoginController',
-                    controllerAs: 'main'
+                    controllerAs: 'loginC'
                 })
 
                 .when('/register', {
                     templateUrl: '/ngViews/register.html',
                     controller: 'RegisterController',
-                    controllerAs: 'main'
+                    controllerAs: 'registerC'
                 })
 
 
