@@ -233,6 +233,7 @@
     <Content Include="ngApps\app.js" />
     <Content Include="ngApps\controllers.js" />
     <Content Include="ngViews\add.html" />
+    <Content Include="ngViews\Admin\userList.html" />
     <Content Include="ngViews\delete.html" />
     <Content Include="ngViews\details.html" />
     <Content Include="ngViews\edit.html" />

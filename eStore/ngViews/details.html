@@ -12,6 +12,10 @@
 
                     <table ng-cloak="true" class="table table-responsive">
                         <tr>
+                            <th>Inventory Date:</th>
+                            <td>{{detailsC.product.inventoryDate|date:'MM/dd/yyyy'}}</td>
+                        </tr>
+                        <tr>
                             <th>Name:</th>
                             <td>{{detailsC.product.name}}</td>
                         </tr>
@@ -33,7 +37,7 @@
                         </tr>
                     </table>
                     <div>
-                        <a href="/list" class="btn btn-primary">Return to Product List</a>
+                        <a href="/list" class="btn btn-primary">Return to List</a>
                     </div>
                 </div>
             </div>

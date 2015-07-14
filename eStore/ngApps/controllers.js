@@ -63,6 +63,13 @@
         };
     });
 
+    //USER LIST CONTROLLER - needs work
+    angular.module('StoreApp').controller('UserListController', function ($location, $http) {
+        var self = this;
+
+    });
+
+
     //MENU CONTROLLER FOR NAVIGATION BAR
     angular.module('StoreApp').controller('MenuController', function ($location, $http, $log) {
         var self = this;

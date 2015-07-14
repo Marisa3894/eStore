@@ -60,6 +60,12 @@
                     controllerAs: 'registerC'
                 })
 
+                .when('/userList', {
+                    templateUrl: '/ngViews/Admin/userList.html',
+                    controller: 'UserListController',
+                    controllerAs: 'userListC'
+                })
+
 
             .otherwise({ redirectTo: '/' });
 

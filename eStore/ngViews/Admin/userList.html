@@ -1,0 +1,40 @@
+﻿<h2>Registered Users</h2>
+
+<!--<form class="form-horizontal" role="form">
+    <div class="form-group">
+        <label class="col-sm-2 control-label">
+            Filter:
+        </label>
+        <div class="col-sm-10">
+            <input type="text" class=" form-control" ng-model="productFilter" />
+        </div>
+    </div>
+</form>-->
+
+<table ng-cloak="true" class="table table-responsive">
+    <thead>
+        <tr>
+            <th></th>
+            <th ng-click="sortBy='firstName'; reverse=!reverse">First Name</th>
+            <th ng-click="sortBy='lastName'; reverse=!reverse">Last Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="user in userC.users | filter:userFilter | orderBy:sortBy:reverse">
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>
+                <a href="/details/{{userList.user.id}}">Details</a>
+                <a href="/edit/{{userList.user.id}}" ng-show="listC.isAdmin()"> | Edit</a>
+                <a href="/delete/{{userList.user.id}}" ng-show="listC.isAdmin()"> | Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!--<div ng-show="!userC.reveal">
+    <img class="mjr-loader" src="../img/loadspinner.gif" />
+</div>-->
+
+
