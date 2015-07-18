@@ -6,3 +6,4 @@ Issue:  product list data did not populate on web page.
 
 Use input ng-submit for forms; ng-click for others
 
+Angular navigation dropdowns require bootstrap.min.js and jquery.min.js to work.

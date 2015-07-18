@@ -190,8 +190,14 @@ LOGIN MODAL:
 		Edit Index.html login link:
 			<li ng-if="!menu.showLogin()"><a ng-click="homeC.loginshowLoginModal()">Login</a></li>
 
-		Site.css:
-			Resize and position logo on modal
+<== NAV DROPDOWNS / MODAL: CSS / MEDIA QUERIES
+	
+	Added media queries to adjust for resizing of modal on smaller devices.
+	Restyled modal heading, body and click to close font awesome icon
+	Added custom favicon to <head>
+
+
+
 
 <== DATEPICKER ==>
 

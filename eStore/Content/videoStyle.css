@@ -1,0 +1,42 @@
+﻿/* Styles go here */
+
+body {
+    margin: 0;
+}
+
+#mjr-videoQuote {
+    color: white;
+    text-align: center;
+    margin-top: 175px;
+    font-size: 60px;
+    position: center center;
+    font-family: Gabriola;
+    letter-spacing: 1px;
+}
+
+#mjr-videoQuote img {
+    width: 100px;
+}
+
+#mjr-videoQuoteAttribute {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    font-family: Gabriola;
+
+}
+/*.container {
+    margin: 0px;
+}*/
+#mjr-video-bg {
+    width: 120%;
+    height: 400px;
+    margin-top: -50px;
+    margin-left: -15px;
+    margin-right: 0px;
+    background-size:contain;
+    z-index: -1;
+}
+
+

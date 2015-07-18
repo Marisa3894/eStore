@@ -39,12 +39,25 @@ textarea {
 
 /*<<=== ID's ===>>*/
 
-#mjr-adminBtn {
+#mjr-navbarLogoLg {
+    height: 30px;
+}
+
+#mjr-navbarLogoSm {
+    height: 40px;
+    padding: 0;
+
+}
+
+.mjr-navbarDropdown {
     height: 50px;
     font-family: 'Roboto-condensed', 'Arial Narrow', Arial, sans-serif;
     font-size: 18px;
     border: none;
+    background-color: transparent;
+    background-image: none;
 }
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -52,16 +65,35 @@ textarea {
     padding-right: 15px;
 }
 
-
 /*<<=== CLASSES ===>>*/
 
 .form-control {
     font-size: 18px;
 }
 
-.modal-header img {
-    padding-left: 75px;
-    width: 450px;
+.modal-header {
+    background-image: -webkit-linear-gradient(#04519b, #044687 60%, #033769);
+    background-image: -o-linear-gradient(#04519b, #044687 60%, #033769);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#04519b), color-stop(60%, #044687), to(#033769));
+    background-image: linear-gradient(#04519b, #044687 60%, #033769);
+    border-bottom: 1px solid #022241;
+    background-color: #fff;
+    border-color: #022a50;
+    width: 100%;
+    color: #ffffff;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto-condensed', 'Arial Narrow', Arial, sans-serif;
+    min-height: 60px;
+}
+
+#mjr-modal-body {
+    /*background-color: darkcyan;*/
+    color: #04519b;
+}
+
+/*border*/
+.modal-content {
+    border-color: #04519b;
 }
 
 .mjr-loader {
@@ -76,4 +108,41 @@ textarea {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+/* Media queries */
+@media (max-width: 425px ) {
+    #mjr-navbarLogoLg {
+        display: none;
+    }
+
+    #mjr-navbarLogoSm {
+        /*width: 40px;*/
+        position: absolute;
+        height: inherit;
+    }
+}
+
+@media(min-width: 425px) {
+    #mjr-navbarLogoSm {
+        display: none;
+    }
+}
+
+@media (max-width: 425px ) {
+    #mjr-modalLogoLg {
+        display: none;
+    }
+
+    #mjr-modalLogoSm {
+        /*width: 40px;*/
+        position: absolute;
+        height: inherit;
+    }
+}
+
+@media(min-width: 425px) {
+    #mjr-modalLogoSm {
+        display: none;
+    }
 }
