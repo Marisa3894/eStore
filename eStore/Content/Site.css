@@ -2,22 +2,22 @@
 
 * {
     font-family: 'Roboto-condensed', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 body {
     font-family: 'Roboto-condensed', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 label {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 h2 {
     padding-bottom: 10px;
     padding-left: 20px;
-    font-family: 'Oswald'
+    font-family: 'Oswald';
 }
 
 img {
@@ -25,7 +25,7 @@ img {
 }
 
 
-tbody img {  /*resizes product list table images*/
+tbody img { /*resizes product list table images*/
     width: 200px;
 }
 
@@ -36,26 +36,37 @@ textarea {
     max-width: 280px;
 }
 
+.navbar-nav {
+    
+    letter-spacing: 1px;
+}
+
+
+
 
 /*<<=== ID's ===>>*/
 
-#mjr-navbarLogoLg {
-    height: 30px;
-}
-
-#mjr-navbarLogoSm {
-    height: 40px;
-    padding: 0;
-
+/*<<=== CLASSES ===>>*/
+.navbar-brand img {
+    padding-bottom: 15px;
 }
 
 .mjr-navbarDropdown {
-    height: 50px;
     font-family: 'Roboto-condensed', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     border: none;
     background-color: transparent;
     background-image: none;
+    height: 50px;
+    letter-spacing: 1px;
+}
+
+.navbar-brand {
+    padding: 7px 15px 0px 15px;
+}
+
+.navbar-brand img {
+    padding: 0;
 }
 
 
@@ -64,8 +75,6 @@ textarea {
     padding-left: 15px;
     padding-right: 15px;
 }
-
-/*<<=== CLASSES ===>>*/
 
 .form-control {
     font-size: 18px;
@@ -86,8 +95,8 @@ textarea {
     min-height: 60px;
 }
 
-#mjr-modal-body {
-    /*background-color: darkcyan;*/
+
+.modal-body {
     color: #04519b;
 }
 
@@ -107,42 +116,72 @@ textarea {
 /*<<=== OTHER ===>>*/
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
+    display: none !important;
 }
 
 /* Media queries */
-@media (max-width: 425px ) {
+@media (max-width: 400px ) {
     #mjr-navbarLogoLg {
         display: none;
+        padding:0;
     }
 
     #mjr-navbarLogoSm {
-        /*width: 40px;*/
+        width: 60px;
         position: absolute;
-        height: inherit;
     }
 }
 
-@media(min-width: 425px) {
+@media(min-width: 400px) {
     #mjr-navbarLogoSm {
         display: none;
+        width: 60px;
     }
 }
 
-@media (max-width: 425px ) {
+@media (max-width: 400px ) {
     #mjr-modalLogoLg {
         display: none;
     }
 
     #mjr-modalLogoSm {
-        /*width: 40px;*/
+        width: 60px;
         position: absolute;
-        height: inherit;
     }
 }
 
-@media(min-width: 425px) {
+@media(min-width: 400px) {
     #mjr-modalLogoSm {
         display: none;
+        width: 60px;
     }
+}
+
+/*<== VIDEO ==>*/
+
+
+#mjr-videoHeader {
+    width: 100%;
+    margin-top: -100px;
+    padding: 0;
+    height: 75%;
+    position: relative;
+    background-image: url('#');
+}
+
+#mjr-quote {
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+    font-family: Gabriola;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+#mjr-quoteAttribute {
+    color: white;
+    text-align: center;
+    font-family: Gabriola;
+    font-size: 2em;
 }

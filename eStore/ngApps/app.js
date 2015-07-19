@@ -1,6 +1,6 @@
 ﻿(function () {
 
-    angular.module('StoreApp', ['ngResource', 'ngRoute', 'ui.bootstrap'])
+    angular.module('StoreApp', ['ngResource', 'ngRoute', 'ui.bootstrap', 'angularVideoBg'])
         .constant('PROD_API', '/api/products')
         .config(function ($routeProvider, $locationProvider) {
 

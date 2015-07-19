@@ -195,7 +195,7 @@ LOGIN MODAL:
 	Added media queries to adjust for resizing of modal on smaller devices.
 	Restyled modal heading, body and click to close font awesome icon
 	Added custom favicon to <head>
-
+	navbar-static-top to remove rounded corners on navbar
 
 
 
