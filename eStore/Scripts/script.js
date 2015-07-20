@@ -2,14 +2,14 @@
     $(window).scroll(function (event) {
         var y = $(this).scrollTop();
 
-        if (y >= 300) {
+        if (y >= 200) {
 
             $('#zafuTallBlue').addClass('animate');
             $('#zafuBlue').addClass('animate');
 
         }
 
-        if (y >= 650) {
+        if (y >= 600) {
 
             $('#zafu').addClass('animate grow-img');
             $('#zab').addClass('animate grow-img');

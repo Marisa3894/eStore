@@ -18,6 +18,24 @@
                     controllerAs: 'homeC'
                 })
 
+                .when('/neck', {
+                    templateUrl: '/ngViews/neck.html',
+                    controller: 'HomeController',
+                    controllerAs: 'homeC'
+                })
+
+                .when('/zab', {
+                    templateUrl: '/ngViews/zab.html',
+                    controller: 'HomeController',
+                    controllerAs: 'homeC'
+                })
+
+                .when('/zafu', {
+                    templateUrl: '/ngViews/zafu.html',
+                    controller: 'HomeController',
+                    controllerAs: 'homeC'
+                })
+
                 .when('/list', {
                     templateUrl: '/ngViews/list.html',
                     controller: 'ListController',

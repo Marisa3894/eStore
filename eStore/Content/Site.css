@@ -24,6 +24,18 @@ h2 {
     font-size: 2.5em;
 }
 
+h3 {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    font-family: Gabriola;
+    color: #008B8B;
+    text-shadow: 1px 1px #777777;
+    font-size: 2em;
+}
+
+#addPg img, #detailsPg img, #editPg img, #deletePg img {
+    width: 300px;
+}
 
 tbody img { /*resizes product list table images*/
     width: 200px;
@@ -33,10 +45,11 @@ tbody img { /*resizes product list table images*/
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 300px;
     
 }
 
+/*Glow around form control*/
 textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
     border-color: #660066;
     box-shadow: 0 1px 1px #e6e6fa inset, 0 0 1px #e6e6fa;
@@ -44,19 +57,7 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 }
 
 
-
-
-/*<<=== ID's ===>>*/
-
-
-
-
 /*<<=== NAVBAR ===>>*/
-
-#aboutSNPC {
-    font-family: Gabriola;
-    font-size: .5em;
-}
 .navbar-nav {
     letter-spacing: 1px;
 }
@@ -140,17 +141,40 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
     /*width: 150px;*/   
 }
 
-.lightgray {
+/*<== HOMEPAGE ==>*/
+
+.beQuiet {
+    text-align: center;
+}
+
+#aboutSNPC {
+    margin-left:  15%;
+    margin-right: 15%;
+    text-align: center center;
+}
+
+#SNPCname {
+    font-family: Gabriola;
+    font-size: 2em;
+    color: #008B8B;
+    text-shadow: 1px 1px #777777;
+
+}
+
+.lightgray1 {
     background-color: #f0f0f0;
     background-size: cover;
-    padding: 30px 10px;
+    padding: 20px 10px;
     text-align: center;
     font-size: 1.4em;
 }
 
-small {
-    display: block;
-    font-size: .7em;
+.lightgray2 {
+    background-color: #f0f0f0;
+    background-size: cover;
+    padding: 50px 10px 40px 10px;
+    text-align: center;
+    font-size: 1.4em;
 }
 
 #section1 {
@@ -160,35 +184,18 @@ small {
 
 #section1 img {
     width: 200px;
-    
 }
 
 #section2 {
-    min-height: 240px;
+    min-height: 300px;
 }
-
-#section2 img {
-    height: 200px;
-    border-radius: 20px;
-}
-
-.anim-img {
-    position: absolute;
-    left: 30%;
-}
-
-/*.anim-img {
-    
-}*/
 
 #zafuBlue {
-    margin: 50px 0 0 20px;
-    /*animation-delay: 2s;*/
-    z-index: 100;
+    margin: 60px 0 0 0px;
 }
 
 #zafuTallBlue {
-    z-index: 1;
+
 }
 
 .center-icons {
@@ -197,12 +204,16 @@ small {
 
 .center-icons span {
     display: block;
-    font-size: 1.4em;
+    padding-top: 20px;
+    font-size: 2em;
+    font-family: Gabriola;
+    color: #008B8B;
+    text-shadow: 1px 1px #777777;
 }
 
 .center-icons img {
-    height: 0;
     width: 0;
+    height: 0;
     -webkit-transition: width height 1s ease;
     -moz-transition: width height 1s ease;
     transition: width height 1s ease;
@@ -220,6 +231,7 @@ small {
     min-height: 200px;
 }
 
+/*Stripes*/
 #s1 {background-color: #D6D3D7 ;}
 #s2 {background-color: #E8E8E8 ;}
 #s3 {background-color: #CBC7CB ;}
@@ -231,35 +243,12 @@ small {
 #s9 {background-color: #D6D3D7 ;}
 #s10 {background-color: #DDDBDD ;}
 
-.map, #us {
-    position: absolute;
-}
-
-#servers, .wt {
-    color: #ffffff;
-}
-
-#servers {
-    font-size: 2em;
-    margin-top:100px;
-}
-
-.wt {font-size: 1em;}
-
-#radial {
-    position: relative;
-    margin-left: 30px;
-    top: 90px;
-}
-
-#us {
-    top: 125px;
-}
-
-.alc {text-align: center center;}
-
 .anim-img {
     opacity: 0;
+}
+.anim-img {
+    position: absolute;
+    left: 30%;
 }
 
 @-webkit-keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
@@ -298,17 +287,9 @@ small {
 }
 
 .center-icons img.grow-img {
-    /*height: px;*/
-    width: 200px;
+    height: 200px;
+    width: 300px;
 }
-
-
-
-
-
-
-
-
 
 /*<<=== OTHER ===>>*/
 
@@ -389,6 +370,7 @@ small {
 #quoteAttribute {
     color: white;
     text-align: center;
+    padding-left: 10%;
     font-family: Gabriola;
     font-size: 2em;
 }
