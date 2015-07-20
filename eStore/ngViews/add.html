@@ -5,32 +5,32 @@
             <form ng-submit="addC.add()" class="form-horizontal">
                 <fieldset>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Inventory Date:</label>
+                        <label class="col-sm-3 control-label">inventory date:</label>
                         <div class="col-sm-9">
                             <input ng-model="addC.newProduct.inventoryDate" type="date" class="form-control" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Image Url:</label>
+                        <label class="col-sm-3 control-label">image url:</label>
                         <div class="col-sm-9">
                             <input ng-model="addC.newProduct.image" type="text" class="form-control" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Name:</label>
+                        <label class="col-sm-3 control-label">name:</label>
                         <div class="col-sm-9">
                             <select class="form-control" id="select" ng-model="addC.product.name">
                                 <option>{{addC.product.name}}</option>
-                                <option>Zafu</option>
-                                <option>Zabouton</option>
-                                <option>Mini-Zab</option>
-                                <option>Neck Roll</option>
-                                <option>Neck Pillow</option>
+                                <option>zafu</option>
+                                <option>zabouton</option>
+                                <option>mini-zab</option>
+                                <option>neck roll</option>
+                                <option>neck pillow</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Fabric:</label>
+                        <label class="col-sm-3 control-label">fabric:</label>
                         <div class="col-sm-9">
                             <select class="form-control" id="select" ng-model="addC.product.fabric">
                                 <option>{{addC.product.fabric}}</option>
@@ -40,7 +40,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-sm-3 control-label">Filling</label>
+                        <label class="col-sm-3 control-label">filling</label>
                         <div class="col-sm-9">
                             <select class="form-control" id="select" ng-model="addC.product.filling">
                                 <option>{{addC.product.filling}}</option>
@@ -51,13 +51,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="editPrice" class="col-sm-3 control-label">Price:</label>
+                        <label for="editPrice" class="col-sm-3 control-label">price:</label>
                         <div class="col-sm-9">
                             <input ng-model="addC.newProduct.price" class="form-control" />
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="description" class="col-sm-3 control-label">Description</label>
+                        <label for="description" class="col-sm-3 control-label">description</label>
                         <div class="col-sm-9">
                             <textarea ng-model="addC.newProduct.description" class="form-control" rows="6"></textarea>
                         </div>
@@ -65,8 +65,8 @@
 
                     <div class="form-group">
                         <div class="col-lg-offset-3 col-sm-9">
-                            <a href="/list" class="btn btn-primary">Cancel</a>
-                            <input type="submit" class="btn btn-info" value="Save" />
+                            <a href="/list" class="btn">cancel</a>
+                            <input type="submit" class="btn" value="Save" />
                         </div>
                     </div>
                 </fieldset>

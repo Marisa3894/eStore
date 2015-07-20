@@ -229,12 +229,18 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="img\favicon.ico" />
+    <Content Include="img\LoadingWait.gif" />
     <Content Include="img\loadspinner.gif" />
     <Content Include="img\LotusColor.png" />
-    <Content Include="img\SNPCGabriola.png" />
-    <Content Include="img\SNPCGabriolaShadow.png" />
-    <Content Include="img\SNPCLotusLogoLg.png" />
-    <Content Include="img\SNPCLotusLogoSm.png" />
+    <Content Include="img\productImg\neckroll.png" />
+    <Content Include="img\productImg\NeckRollPillow.png" />
+    <Content Include="img\productImg\zafu3.png" />
+    <Content Include="img\SNPC_colorLogoLg.png" />
+    <Content Include="img\SNPC_colorLogoSm.png" />
+    <Content Include="img\productImg\zafuBlue.png" />
+    <Content Include="img\productImg\zafuRedPrint.png" />
+    <Content Include="img\productImg\zafuTallBlue.png" />
+    <Content Include="img\productImg\zafuTallRed.png" />
     <Content Include="ngApps\app.js" />
     <Content Include="ngApps\controllers.js" />
     <Content Include="ngViews\add.html" />
@@ -294,6 +300,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\script.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

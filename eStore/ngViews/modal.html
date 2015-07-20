@@ -1,15 +1,15 @@
 ﻿
 <div class="modal-header">
-    <div style="display: inline-block">
-        <img src="../img/SNPCLotusLogoLg.png" id="mjr-modalLogoLg" />
-        <img src="../img/SNPCLotusLogoSm.png" id="mjr-modalLogoSm" />
-</div>
-    <button type="button" class="close" data-dismiss="modal" ng-click="loginC.cancel()"><i class="fa fa-times-circle fa-inverse"></i>
+    <button type="button" class="close" data-dismiss="modal" ng-click="loginC.cancel()">
+        <i class="fa fa-times-circle fa-inverse" style="color: darkcyan"></i>
     </button>
+    <div style="display: inline-block">
+        <img src="../img/SNPC_colorLogoLg.png" id="modalLogoLg" />
+        <img src="../img/SNPC_colorLogoSm.png" id="modalLogoSm" />
+    </div>
 </div>
 <div class="modal-body">
     <div ng-if="loginC.template == '/ngViews/login.html'">
         <ng-include src="loginC.template" />
     </div>
 </div>
-

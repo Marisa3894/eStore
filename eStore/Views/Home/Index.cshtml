@@ -15,7 +15,7 @@
 <body ng-controller="HomeController as homeC">
     
     <!-- Navigation bar -->
-    <nav class="navbar navbar-inverse navbar-static-top" ng-controller="MenuController as menu" ng-cloak>
+    <nav class="navbar navbar-default navbar-static-top" ng-controller="MenuController as menu" ng-cloak>
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
@@ -26,42 +26,42 @@
                 </button>
                 <div style="display: inline-block">
                     <a class="navbar-brand" href="~/">
-                         <img id="mjr-navbarLogoLg" src="~/img/SNPCLotusLogoLg.png" />
-                         <img id="mjr-navbarLogoSm" src="~/img/SNPCLotusLogoSm.png" />
+                         <img id="navbarLogoLg" src="~/img/SNPC_colorLogoLg.png" />
+                         <img id="navbarLogoSm" src="~/img/SNPC_colorLogoSm.png" />
                     </a>
                 </div>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
                 <ul class="nav navbar-nav">
-                    <li><a href="~/list">Products</a></li>
-                    <li><a href="~/list">Other</a></li>
+                    <li><a href="~/list">products</a></li>
+                    <li><a href="~/list">other</a></li>
                 </ul>
 
                 <!-- Dropdown Menus -->
                 <div class="btn-group " dropdown>
-                    <button type="button" class="btn btn-info dropdown-toggle mjr-navbarDropdown" dropdown-toggle>
-                        Links &nbsp; <span class="caret"></span>
+                    <button type="button" class="btn dropdown-toggle navbarDropdown" dropdown-toggle>
+                        links &nbsp; <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/list">Products</a></li>
-                        <li><a href="#">Link</a></li>
-                        <li><a href="#">Link</a></li>
+                        <li><a href="/list">products</a></li>
+                        <li><a href="#">link</a></li>
+                        <li><a href="#">link</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">contact us</a></li>
                     </ul>
                 </div>
 
                 <div class="btn-group" dropdown>
-                    <button ng-show="menu.isAdmin()" type="button" class="btn btn-info dropdown-toggle mjr-navbarDropdown" dropdown-toggle>
-                        Admin &nbsp; <span class="caret"></span>
+                    <button ng-show="menu.isAdmin()" type="button" class="btn dropdown-toggle navbarDropdown" dropdown-toggle>
+                        admin &nbsp; <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu">
-                        <li ng-show="menu.isAdmin()"><a href="~/add">Add Product</a></li>
-                        <li ng-show="menu.isAdmin()"><a href="#">Link</a></li>
-                        <li ng-show="menu.isAdmin()"><a href="#">Link</a></li>
+                        <li ng-show="menu.isAdmin()"><a href="~/add">add product</a></li>
+                        <li ng-show="menu.isAdmin()"><a href="#">link</a></li>
+                        <li ng-show="menu.isAdmin()"><a href="#">link</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Users</a></li>
+                        <li><a href="#">users</a></li>
                     </ul>
                 </div>
 
@@ -69,9 +69,9 @@
 
                 <!-- Login/Register/Admin links -->
                 <ul class="nav navbar-nav navbar-right">
-                    <li ng-if="!menu.showLogin()"><a href="~/register">Register</a></li>
-                    <li ng-if="!menu.showLogin()"><a ng-click="homeC.loginshowLoginModal()">Login</a></li>
-                    <li ng-if="menu.showLogin()"><a ng-click="menu.logout()">Log out</a></li>
+                    <li ng-if="!menu.showLogin()"><a href="~/register">register</a></li>
+                    <li ng-if="!menu.showLogin()"><a ng-click="homeC.loginshowLoginModal()">login</a></li>
+                    <li ng-if="menu.showLogin()"><a ng-click="menu.logout()">log out</a></li>
                 </ul>
             </div>
         </div>
@@ -79,8 +79,6 @@
 
     <!-- Partial Views Inserted Here -->
     <div class="container-fluid" ng-view="view"></div>
-    &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
-            @*<i class="fa fa-pagelines fa-5x fa-flip-horizontal" style="color: #04519b"></i>*@
         
     
 
@@ -103,5 +101,6 @@
     <script src="~/Scripts/angular-video-bg.js"></script>
     <script src="~/ngApps/app.js"></script>
     <script src="~/ngApps/controllers.js"></script>
+    <script src="~/Scripts/script.js"></script>
 </body>
 </html>
