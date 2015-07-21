@@ -1,45 +1,49 @@
 ﻿<div class="container-fluid">
-    <h2>product list</h2>
-    <form class="form-horizontal" role="form">
-        <div class="form-group">
-            <label class="col-sm-2 control-label">
-                filter list:
-            </label>
-            <div class="col-sm-10">
-                <input type="text" class=" form-control" ng-model="productFilter" />
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>product list</h2>
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">
+                        filter list:
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="text" class=" form-control" ng-model="productFilter" />
+                    </div>
+                </div>
+            </form>
+
+            <table ng-cloak="true" class="table table-responsive table-striped">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th ng-click="sortBy='name'; reverse=!reverse">name</th>
+                        <th ng-click="sortBy='fabric'; reverse=!reverse">fabric</th>
+                        <th ng-click="sortBy='filling'; reverse=!reverse">filling</th>
+                        <th ng-click="sortBy='price'; reverse=!reverse">price</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="product in listC.products | filter:productFilter | orderBy:sortBy:reverse">
+                        <td><img ng-src="{{product.image}}" /></td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.fabric}}</td>
+                        <td>{{product.filling}}</td>
+                        <td>{{product.price|currency}}</td>
+                        <td>
+                            <a href="/details/{{product.id}}">details</a>
+                            <a href="/edit/{{product.id}}" ng-show="listC.isAdmin()"> | edit</a>
+                            <a href="/delete/{{product.id}}" ng-show="listC.isAdmin()"> | delete</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div ng-show="!listC.reveal">
+                <img class="loaderList" src="../img/LoadingWait.gif" />
             </div>
         </div>
-    </form>
-
-    <table ng-cloak="true" class="table table-responsive table-striped">
-        <thead>
-            <tr>
-                <th></th>
-                <th ng-click="sortBy='name'; reverse=!reverse">name</th>
-                <th ng-click="sortBy='fabric'; reverse=!reverse">fabric</th>
-                <th ng-click="sortBy='filling'; reverse=!reverse">filling</th>
-                <th ng-click="sortBy='price'; reverse=!reverse">price</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="product in listC.products | filter:productFilter | orderBy:sortBy:reverse">
-                <td><img ng-src="{{product.image}}" /></td>
-                <td>{{product.name}}</td>
-                <td>{{product.fabric}}</td>
-                <td>{{product.filling}}</td>
-                <td>{{product.price|currency}}</td>
-                <td>
-                    <a href="/details/{{product.id}}">details</a>
-                    <a href="/edit/{{product.id}}" ng-show="listC.isAdmin()"> | edit</a>
-                    <a href="/delete/{{product.id}}" ng-show="listC.isAdmin()"> | delete</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div ng-show="!listC.reveal">
-        <img class="loader" src="../img/LoadingWait.gif" />
     </div>
 </div>
 

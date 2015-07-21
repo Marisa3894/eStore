@@ -139,13 +139,18 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     
 }
 
-.loader {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    /*width: 150px;*/   
+.loaderList {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+.loaderModal {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
 }
 
 /*<== HOMEPAGE ==>*/
@@ -195,13 +200,13 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
-    width: 300px;
+    width: 200px;
 }
 
 .lightgray1 {
     background-color: #f0f0f0;
     background-size: cover;
-    padding: 20px 10px;
+    padding: 40px 10px;
     text-align: center;
     font-size: 1.4em;
 }
@@ -209,10 +214,10 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
 .lightgray2 {
     background-color: #f0f0f0;
     background-size: cover;
-    padding: 40px 0px;
+    padding: 60px 0px;
     text-align: center;
     font-size: 1.4em;
-    height: 300px;
+    height: 350px;
 }
 
 #section1 {
@@ -333,11 +338,11 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
 .homeFooter {
     background-image: url('../img/stripebackground.png');
     background-size: cover;
-    min-height: 200px;
+    min-height: 250px;
 }
 
 .footerList h4 {
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 .footerList {
@@ -372,7 +377,7 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
 }
 
 /* Media queries */
-@media (max-width: 400px ) {
+@media (max-width: 450px ) {
     #navbarLogoLg {
         display: none;
         padding:0;
@@ -385,14 +390,14 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     }
 }
 
-@media(min-width: 400px) {
+@media(min-width: 450px) {
     #navbarLogoSm {
         display: none;
         width: 50px;
     }
 }
 
-@media (max-width: 400px ) {
+@media (max-width: 450px ) {
     #modalLogoLg {
         width: 75%;
         display: none;
@@ -404,7 +409,7 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     }
 }
 
-@media(min-width: 400px) {
+@media(min-width: 450px) {
     #modalLogoSm {
         display: none;
         width: 60px;
@@ -417,7 +422,6 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
 #homePg {
     padding: 0;
     margin: 0;
-    background-image: url('#');
 }
 
 #videoHeader {

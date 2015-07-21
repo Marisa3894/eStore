@@ -19,16 +19,12 @@
     });
 
     //USER LOGIN & CLAIMS CONTROLLER
-    angular.module('StoreApp').controller('LoginController', function ($location, $http, $modalInstance ) {
+    angular.module('StoreApp').controller('LoginController', function ($location, $http, $modalInstance, $scope) {
         var self = this;
 
         //reveal wait spinner on button click
-        self.reveal = false;
-        
-        self.onsubmit = function () {
-            self.reveal = true;
-        };
-        
+        $scope.reveal = false;
+
         //cancel modal
         self.template = '/ngViews/login.html'
         self.cancel = function () {
@@ -38,6 +34,8 @@
 
         self.login = function () {
             var data = "grant_type=password&username=" + self.loginEmail + "&password=" + self.loginPassword;
+
+            $scope.reveal = true;
 
             $http.post('/Token', data,
             {
@@ -50,6 +48,7 @@
                         sessionStorage.setItem('isAdmin', 'true')
                     }
                 })
+
                 $location.path('/');
             })
             .then(function () {
@@ -67,12 +66,6 @@
                 $location.path('/');
             });
         };
-    });
-
-    //USER LIST CONTROLLER - needs work
-    angular.module('StoreApp').controller('UserListController', function ($location, $http) {
-        var self = this;
-
     });
 
 

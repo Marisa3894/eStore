@@ -12,8 +12,9 @@
     <div ng-if="loginC.template == '/ngViews/login.html'">
         <ng-include src="loginC.template" />
     </div>
+    <div ng-show="reveal">
+        <img class="loaderModal" src="../img/LoadingWait.gif" />
+    </div>
 </div>
 
-<div ng-show="LoginC.reveal">
-    <img class="loader" src="../img/LoadingWait.gif" />
-</div>
+
