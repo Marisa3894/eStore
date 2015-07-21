@@ -16,13 +16,19 @@
                 controllerAs: 'loginC',
             })
         };
-
     });
 
     //USER LOGIN & CLAIMS CONTROLLER
     angular.module('StoreApp').controller('LoginController', function ($location, $http, $modalInstance ) {
         var self = this;
 
+        //reveal wait spinner on button click
+        self.reveal = false;
+        
+        self.onsubmit = function () {
+            self.reveal = true;
+        };
+        
         //cancel modal
         self.template = '/ngViews/login.html'
         self.cancel = function () {

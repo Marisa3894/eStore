@@ -18,20 +18,26 @@
                     controllerAs: 'homeC'
                 })
 
-                .when('/neck', {
-                    templateUrl: '/ngViews/neck.html',
+                .when('/neckrollPillow', {
+                    templateUrl: '/ngViews/neckrollPillow.html',
                     controller: 'HomeController',
                     controllerAs: 'homeC'
                 })
 
-                .when('/zab', {
-                    templateUrl: '/ngViews/zab.html',
+                .when('/zafuZab', {
+                    templateUrl: '/ngViews/zafuZab.html',
                     controller: 'HomeController',
                     controllerAs: 'homeC'
                 })
 
-                .when('/zafu', {
-                    templateUrl: '/ngViews/zafu.html',
+                .when('/coverFilling', {
+                    templateUrl: '/ngViews/coverFilling.html',
+                    controller: 'HomeController',
+                    controllerAs: 'homeC'
+                })
+
+                .when('/underConstruction', {
+                    templateUrl: '/ngViews/underConstruction.html',
                     controller: 'HomeController',
                     controllerAs: 'homeC'
                 })
@@ -85,7 +91,10 @@
                 })
 
 
-            .otherwise({ redirectTo: '/' });
+            .otherwise({
+                redirectTo: '/404',
+                templateUrl: '/ngViews/404.html'
+            });
 
             $locationProvider.html5Mode(true);
 

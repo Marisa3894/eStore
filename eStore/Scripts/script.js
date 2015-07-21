@@ -9,7 +9,7 @@
 
         }
 
-        if (y >= 600) {
+        if (y >= 500) {
 
             $('#zafu').addClass('animate grow-img');
             $('#zab').addClass('animate grow-img');

@@ -33,6 +33,13 @@ h3 {
     font-size: 2em;
 }
 
+h4 {
+    font-family: Gabriola;
+    color: #008B8B;
+    text-shadow: 1px 1px #777777;
+    font-size: 1.5em;
+}
+
 #addPg img, #detailsPg img, #editPg img, #deletePg img {
     width: 300px;
 }
@@ -49,8 +56,8 @@ textarea {
     
 }
 
-/*Glow around form control*/
-textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+/*Glow around form control*//*input[type]:focus,*/ 
+textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {   
     border-color: #660066;
     box-shadow: 0 1px 1px #e6e6fa inset, 0 0 1px #e6e6fa;
     outline: 0 none;
@@ -161,6 +168,36 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 
 }
 
+#underConstr {
+    text-align: center;
+
+}
+
+#underConstr img {
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+
+#pageNotFound p {
+    padding-left: 50px;
+}
+
+#pageNotFound a {
+    text-decoration: none;
+}
+
+#pageNotFound img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    width: 300px;
+}
+
 .lightgray1 {
     background-color: #f0f0f0;
     background-size: cover;
@@ -172,9 +209,10 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 .lightgray2 {
     background-color: #f0f0f0;
     background-size: cover;
-    padding: 50px 10px 40px 10px;
+    padding: 40px 0px;
     text-align: center;
     font-size: 1.4em;
+    height: 300px;
 }
 
 #section1 {
@@ -211,6 +249,7 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
     text-shadow: 1px 1px #777777;
 }
 
+
 .center-icons img {
     width: 0;
     height: 0;
@@ -232,7 +271,7 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 }
 
 /*Stripes*/
-#s1 {background-color: #D6D3D7 ;}
+/*#s1 {background-color: #D6D3D7 ;}
 #s2 {background-color: #E8E8E8 ;}
 #s3 {background-color: #CBC7CB ;}
 #s4 {background-color: #DDDBDD ;}
@@ -241,7 +280,7 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 #s7 {background-color: #D6D3D7 ;}
 #s8 {background-color: #DDDBDD ;}
 #s9 {background-color: #D6D3D7 ;}
-#s10 {background-color: #DDDBDD ;}
+#s10 {background-color: #DDDBDD ;}*/
 
 .anim-img {
     opacity: 0;
@@ -287,9 +326,44 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
 }
 
 .center-icons img.grow-img {
-    height: 200px;
-    width: 300px;
+    height: 160px;
+    width: 240px;
 }
+
+.homeFooter {
+    background-image: url('../img/stripebackground.png');
+    background-size: cover;
+    min-height: 200px;
+}
+
+.footerList h4 {
+    padding-top: 30px;
+}
+
+.footerList {
+    list-style: none; 
+}
+
+.footerList img {
+    width: 8%;
+}
+
+.footerList a {
+    color: #777777;
+}
+
+.footerList a:hover {
+    color: #008B8B;
+    text-decoration: none;
+}
+
+.copyright p {
+    text-align: center;
+    color: darkcyan;
+    font-family: Gabriola;
+    font-size: 1.3em;
+}
+
 
 /*<<=== OTHER ===>>*/
 
@@ -353,7 +427,6 @@ textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
     height: 65%;
     position: relative;
 }
-
 
 #quote {
     
