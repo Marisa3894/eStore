@@ -4,8 +4,9 @@
 
         if (y >= 200) {
 
-            $('#zafuTallBlue').addClass('animate');
-            $('#zafuBlue').addClass('animate');
+            $('#zafubuckwheat').addClass('animate');
+            $('#buckwheatbag').addClass('animate');
+            $('#neckrollbuckwheat').addClass('animate');
 
         }
 

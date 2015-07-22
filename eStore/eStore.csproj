@@ -228,6 +228,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="img\buckwheatbag.png" />
     <Content Include="img\fabricfilling.png" />
     <Content Include="img\favicon.ico" />
     <Content Include="img\listItem\cube102.png" />
@@ -269,6 +270,7 @@
     <Content Include="img\LotusColor.png" />
     <Content Include="img\meditate.gif" />
     <Content Include="img\neckroll.png" />
+    <Content Include="img\neckrollbuckwheat.png" />
     <Content Include="img\productImg\mzabRedPrint.png" />
     <Content Include="img\productImg\neckroll_list.png" />
     <Content Include="img\productImg\zabPairBlue.png" />
@@ -280,6 +282,7 @@
     <Content Include="img\SNPC_colorLogoLg.png" />
     <Content Include="img\SNPC_colorLogoSm.png" />
     <Content Include="img\zafuBlue.png" />
+    <Content Include="img\zafubuckwheat.png" />
     <Content Include="img\zafuRedPrint.png" />
     <Content Include="img\zafuTallBlue.png" />
     <Content Include="img\zafuTallRed.png" />

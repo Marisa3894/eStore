@@ -50,10 +50,9 @@ h4 {
 }
 
 .addPg img, .detailsPg img, .editPg img, .deletePg img {
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 300px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .deletePg {
@@ -125,6 +124,7 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     padding: 16px 15px 14px 15px;
     color: #777777;
     border-color: #777777;
+   
 }
 
 .btn:hover {
@@ -179,8 +179,12 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
 
 /*<== HOMEPAGE ==>*/
 
-.beQuiet {
+.beQuiet h3, .beQuiet p {
     text-align: center;
+}
+
+.beQuiet {
+    min-height: 240px;
 }
 
 #aboutSNPC {
@@ -243,28 +247,16 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     padding: 60px 0px;
     text-align: center;
     font-size: 1.4em;
-    height: 350px;
+    min-height: 300px;
 }
 
 #section1 {
     margin-top: 20px;
-    min-height: 240px;
-}
-
-#section1 img {
-    width: 200px;
+    min-height: 300px;
 }
 
 #section2 {
     min-height: 300px;
-}
-
-#zafuBlue {
-    margin: 60px 0 0 0px;
-}
-
-#zafuTallBlue {
-
 }
 
 .center-icons {
@@ -301,24 +293,14 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     min-height: 200px;
 }
 
-/*Stripes*/
-/*#s1 {background-color: #D6D3D7 ;}
-#s2 {background-color: #E8E8E8 ;}
-#s3 {background-color: #CBC7CB ;}
-#s4 {background-color: #DDDBDD ;}
-#s5 {background-color: #E8E8E8 ;}
-#s6 {background-color: #E3E0E4 ;}
-#s7 {background-color: #D6D3D7 ;}
-#s8 {background-color: #DDDBDD ;}
-#s9 {background-color: #D6D3D7 ;}
-#s10 {background-color: #DDDBDD ;}*/
+/*.anim-img {
+    opacity: 0;
+}*/
 
 .anim-img {
     opacity: 0;
-}
-.anim-img {
     position: absolute;
-    left: 30%;
+    /*left: 30%;*/
 }
 
 @-webkit-keyframes fadeIn {from {opacity: 0;} to {opacity: 1;}}
@@ -343,17 +325,38 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     animation-duration: 1s;
 }
 
-#zafuTallBlue.animate {
-    -webkit-transform: translate(17em,0);
-    -moz-transform: translate(17em,0);
-    transform: translate(17em,0);
+#zafubuckwheat.animate {
+    -webkit-transform: translate(20em,0);
+    -moz-transform: translate(20em,0);
+    transform: translate(20em,0);
 }
 
-#zafuBlue.animate {
-    -webkit-transform: translate(5em,0);
-    -moz-transform: translate(5em,0);
-    transform: translate(5em,0);
+#zafubuckwheat {
+    height: 200px;
+    z-index: 200;
+}
+
+#buckwheatbag.animate {
+    -webkit-transform: translate(12em,0);
+    -moz-transform: translate(12em,0);
+    transform: translate(12em,0);
     z-index: 100;
+}
+#buckwheatbag {
+    margin: 100px 0 0 0px;
+    height: 150px;
+    z-index: 100;
+}
+
+#neckrollbuckwheat.animate {
+    -webkit-transform: translate(10em,0);
+    -moz-transform: translate(10em,0);
+    transform: translate(10em,0);
+}
+
+#neckrollbuckwheat {
+    height: 150px;
+    z-index: 300;
 }
 
 .center-icons img.grow-img {

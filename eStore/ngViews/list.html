@@ -1,4 +1,4 @@
-﻿<div class="container-fluid" >
+﻿<div class="container-fluid">
     <div class="row">
         <div class="col-sm-12" id="listPg">
             <h2>product list</h2>
@@ -39,8 +39,13 @@
                             <a href="#" ng-show="listC.isAdmin()" ng-click="listC.deleteshowDeleteModal(product.id)"> | delete</a>
                         </td>
                     </tr>
-                </tbody>
+                    <tfooter>
+                        <tr>
+                            <td><pagination boundary-links="true" total-items="totalItems" ng-model="currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></pagination></td>
+                        </tr>
+                    </tfooter>
             </table>
+            
 
             <div ng-show="!listC.reveal">
                 <img class="loaderList" src="../img/LoadingWait.gif" />
