@@ -16,7 +16,7 @@ namespace eStore.Migrations
 
         protected override void Seed(eStore.Models.ApplicationDbContext context)
         {
-            var user = new ApplicationUser
+            var user1 = new ApplicationUser
             {
                 UserName = "marisa.reilly@outlook.com",
                 Email = "marisa.reilly@outlook.com",
@@ -27,10 +27,24 @@ namespace eStore.Migrations
             var userStore = new UserStore<ApplicationUser>(context);
             var userManager = new ApplicationUserManager(userStore);
 
-            if (userManager.FindByName(user.UserName) == null)
+            if (userManager.FindByName(user1.UserName) == null)
             {
-                userManager.Create(user, "Secret123!");
-                userManager.AddClaim(user.Id, new Claim("Admin", "true"));
+                userManager.Create(user1, "Secret123!");
+                userManager.AddClaim(user1.Id, new Claim("Admin", "true"));
+            }
+
+            var user2 = new ApplicationUser
+            {
+                UserName = "stephanie@snpc.com",
+                Email = "stephanie@snpc.com",
+                FirstName = "Stephanie",
+                LastName = "Safran",
+            };
+
+            if (userManager.FindByName(user2.UserName) == null)
+            {
+                userManager.Create(user2, "Secret123!");
+                userManager.AddClaim(user2.Id, new Claim("Reseller", "true"));
             }
 
             var products = new Product[] {

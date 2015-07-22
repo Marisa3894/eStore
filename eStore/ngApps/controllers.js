@@ -10,7 +10,7 @@
         //LoginController for login modal
         self.loginshowLoginModal = function () {
             $modal.open({
-                animation: true,
+                animation: false,
                 templateUrl: '/ngViews/modal.html',
                 controller: 'LoginController',
                 controllerAs: 'loginC',
@@ -90,15 +90,31 @@
 
 
     //LIST
-    angular.module('StoreApp').controller('ListController', function (PROD_API, $resource, $location) {
+    angular.module('StoreApp').controller('ListController', function (PROD_API, $resource, $location, $modal) {
         var self = this;
 
         self.reveal = false;
+
+        //DeleteController for delete modal
+        self.deleteshowDeleteModal = function (productId) {
+            $modal.open({
+                animation: false,
+                templateUrl: '/ngViews/modal.html',
+                controller: 'DeleteController',
+                controllerAs: 'deleteC',
+                resolve: {
+                    productId: function () {
+                        return productId;
+                    }
+                }
+            })
+        };
 
         // query products list
         var Product = $resource(PROD_API);
         Product.query().$promise.then(function (data) {
             // on success; / back from the server
+            console.log("foromg")
             self.reveal = true;
             self.products = data;
         },
@@ -149,14 +165,28 @@
     });
 
     //DELETE 
-    angular.module('StoreApp').controller('DeleteController', function (PROD_API, $resource, $routeParams, $location) {
+    angular.module('StoreApp').controller('DeleteController', function (PROD_API, $resource, $routeParams, $location, $modalInstance, productId) {
         var self = this;
+
+        //cancel modal
+        self.template = '/ngViews/delete.html'
+        self.cancel = function () {
+            $modalInstance.close('cancel');
+        };
+
+
         var Product = $resource(PROD_API);
-        self.product = Product.get({ id: $routeParams.id });
+        self.product = Product.get({ id: productId });
 
         self.remove = function () {
-            Product.remove({ id: self.product.id }).$promise.then(function () {
-                $location.path('/list');
+            Product.remove({ id: productId }).$promise.then(function () {
+                $modalInstance.close('cancel');
+                // band-aid
+                // 1. use a service to communicate with the list controller
+                // 2. use $rootScope to communicate with the list controller
+
+                // Ideal - move into directive
+                location.reload();
             }, function () {
                 //alert(['Product deletion failed.'])
             });
@@ -165,6 +195,7 @@
         self.redirect = function () {
             $location.path('/list');
         }
+       
     });
 })();
 

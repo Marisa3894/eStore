@@ -1,17 +1,37 @@
 ﻿
 <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" ng-click="loginC.cancel()">
-        <i class="fa fa-times-circle fa-inverse" style="color: darkcyan"></i>
-    </button>
+    <!--close icon for login modal-->
+    <div ng-if="loginC.template == '/ngViews/login.html'">
+        <button type="button" class="close" data-dismiss="modal" ng-click="loginC.cancel()" ng-show="">
+            <i class="fa fa-times-circle fa-inverse" style="color: darkcyan"></i>
+        </button>
+    </div>
+
+    <!--close icon for delete modal-->
+    <div ng-if="deleteC.template == '/ngViews/delete.html'">
+        <button type="button" class="close" data-dismiss="modal" ng-click="deleteC.cancel()">
+            <i class="fa fa-times-circle fa-inverse" style="color: darkcyan"></i>
+        </button>
+    </div>
+
+    <!--modal logo-->
     <div style="display: inline-block">
         <img src="../img/SNPC_colorLogoLg.png" id="modalLogoLg" />
         <img src="../img/SNPC_colorLogoSm.png" id="modalLogoSm" />
     </div>
 </div>
+
 <div class="modal-body">
+    <!--login modal content-->
     <div ng-if="loginC.template == '/ngViews/login.html'">
         <ng-include src="loginC.template" />
     </div>
+
+    <!--delete modal content-->
+    <div ng-if="deleteC.template == '/ngViews/delete.html'">
+        <ng-include src="deleteC.template" />
+    </div>
+
     <div ng-show="reveal">
         <img class="loaderModal" src="../img/LoadingWait.gif" />
     </div>

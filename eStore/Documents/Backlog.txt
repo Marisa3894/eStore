@@ -199,7 +199,12 @@ LOGIN MODAL:
 
 
 
-<== DATEPICKER ==>
+<== DELETE MODAL ==>
+
+Add delete modal controller to list controller + $modal
+Add cancel / dismiss to Delete controller + $modalInstance
+change delete url:  enter ng-click 
+Add 
 
 
 

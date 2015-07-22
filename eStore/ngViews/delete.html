@@ -1,40 +1,11 @@
-﻿<div class="container-fluid" id="detailsPg">
+﻿<div class="container-fluid deletePg">
     <div class="row">
         <div class="col-md-12">
-            <h2>delete this product?</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <br />
-                    <image ng-src="{{deleteC.product.image}}" />
-                </div>
-                <div class="col-md-9">
-                    <table ng-cloak="true" class="table table-responsive">
-                        <tr>
-                            <th>name:</th>
-                            <td>{{deleteC.product.name}}</td>
-                        </tr>
-                        <tr>
-                            <th>filling:</th>
-                            <td>{{deleteC.product.filling}}</td>
-                        </tr>
-                        <tr>
-                            <th>fabric:</th>
-                            <td>{{deleteC.product.fabric}}</td>
-                        </tr>
-                        <tr>
-                            <th>price:</th>
-                            <td>{{deleteC.product.price|currency}}</td>
-                        </tr>
-                        <tr>
-                            <th>description:</th>
-                            <td>{{deleteC.product.description}}</td>
-                        </tr>
-                    </table>
-                    <div>
-                        <a href="/list" class="btn">cancel</a>
-                        <input ng-click="deleteC.remove()" type="button" class="btn" value="delete" />
-                    </div>
-                </div>
+            <p>are you sure you want to delete this product from the database?</p>
+            <image ng-src="{{deleteC.product.image}}" /><br />
+            <div>
+                <a href="/list" class="btn" ng-click="deleteC.cancel()">cancel</a>
+                <input ng-click="deleteC.remove()" type="button" class="btn" value="delete" />
             </div>
         </div>
     </div>

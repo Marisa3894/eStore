@@ -5,6 +5,10 @@
     font-size: 16px;
 }
 
+a {
+        text-decoration: none;
+}
+
 body {
     font-family: 'Roboto-condensed', 'Arial Narrow', Arial, sans-serif;
     font-size: 16px;
@@ -40,12 +44,25 @@ h4 {
     font-size: 1.5em;
 }
 
-#addPg img, #detailsPg img, #editPg img, #deletePg img {
+
+.addPg, .detailsPg, .editPg, .errorPg {
+    min-height: 700px;
+}
+
+.addPg img, .detailsPg img, .editPg img, .deletePg img {
     width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.deletePg {
+    text-align: center;
 }
 
 tbody img { /*resizes product list table images*/
     width: 200px;
+
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -96,6 +113,7 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     text-shadow: none;
     padding: 16px 15px 14px 15px;
     color: #777777;
+    border-color: #e6e6fa;
 }
 
 .btn:hover {
@@ -123,21 +141,15 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     min-height: 60px;
 }
 
-/*.modal-body {
-    color: #04519b;
-}*/
-
 .modal-content {
     border-color: darkcyan;
+    margin-top: 100px;
 }
 
 #modalLogoLg {
     width: 75%;
 }
 
-#modalLogoSm {
-    
-}
 
 .loaderList {
     display: block;
@@ -150,7 +162,7 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
+    width: 150px;
 }
 
 /*<== HOMEPAGE ==>*/
@@ -173,12 +185,12 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
 
 }
 
-#underConstr {
+#comingSoonPg {
     text-align: center;
-
+    min-height: 600px;
 }
 
-#underConstr img {
+#comingSoonPg img {
     display: block;
     margin-top: 100px;
     margin-left: auto;
@@ -186,16 +198,18 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     width: 30%;
 }
 
+.errorPg {}
 
-#pageNotFound p {
+
+.errorPg p {
     padding-left: 50px;
 }
 
-#pageNotFound a {
+.errorPg a {
     text-decoration: none;
 }
 
-#pageNotFound img {
+.errorPg img {
     display: block;
     margin-left: auto;
     margin-right: auto;

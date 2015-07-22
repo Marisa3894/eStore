@@ -36,8 +36,8 @@
                     controllerAs: 'homeC'
                 })
 
-                .when('/underConstruction', {
-                    templateUrl: '/ngViews/underConstruction.html',
+                .when('/comingSoon', {
+                    templateUrl: '/ngViews/comingSoon.html',
                     controller: 'HomeController',
                     controllerAs: 'homeC'
                 })
@@ -92,8 +92,8 @@
 
 
             .otherwise({
-                redirectTo: '/404',
-                templateUrl: '/ngViews/404.html'
+                redirectTo: '/error',
+                templateUrl: '/ngViews/error.html'
             });
 
             $locationProvider.html5Mode(true);

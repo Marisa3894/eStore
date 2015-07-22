@@ -1,6 +1,6 @@
-﻿<div class="container-fluid">
+﻿<div class="container-fluid" >
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12" id="listPg">
             <h2>product list</h2>
             <form class="form-horizontal" role="form">
                 <div class="form-group">
@@ -34,7 +34,7 @@
                         <td>
                             <a href="/details/{{product.id}}">details</a>
                             <a href="/edit/{{product.id}}" ng-show="listC.isAdmin()"> | edit</a>
-                            <a href="/delete/{{product.id}}" ng-show="listC.isAdmin()"> | delete</a>
+                            <a href="#" ng-show="listC.isAdmin()" ng-click="listC.deleteshowDeleteModal(product.id)"> | delete</a>
                         </td>
                     </tr>
                 </tbody>
