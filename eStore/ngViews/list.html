@@ -16,9 +16,10 @@
             <table ng-cloak="true" class="table table-responsive table-striped">
                 <thead>
                     <tr>
-                        <th></th>
+                        <th ng-click="sortBy='image'; reverse=!reverse">type</th>
                         <th ng-click="sortBy='name'; reverse=!reverse">name</th>
                         <th ng-click="sortBy='fabric'; reverse=!reverse">fabric</th>
+                        <th ng-click="sortBy='color'; reverse=!reverse">color</th>
                         <th ng-click="sortBy='filling'; reverse=!reverse">filling</th>
                         <th ng-click="sortBy='price'; reverse=!reverse">price</th>
                         <th></th>
@@ -29,6 +30,7 @@
                         <td><img ng-src="{{product.image}}" /></td>
                         <td>{{product.name}}</td>
                         <td>{{product.fabric}}</td>
+                        <td>{{product.color}}</td>
                         <td>{{product.filling}}</td>
                         <td>{{product.price|currency}}</td>
                         <td>

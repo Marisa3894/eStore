@@ -60,17 +60,28 @@ h4 {
     text-align: center;
 }
 
-tbody img { /*resizes product list table images*/
-    width: 200px;
+.deletePg p {
+    text-align: center;
+    color: red;
+    font-size: 1.5em;
+}
 
+.deletePg img {
+    width: 200px;
+    padding-top: 15px;
+}
+
+
+
+tbody img { /*resizes product list table images*/
+    height: 50px;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
-    max-width: 300px;
-    
+    max-width: 300px;  
 }
 
 /*Glow around form control*//*input[type]:focus,*/ 
@@ -113,7 +124,7 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     text-shadow: none;
     padding: 16px 15px 14px 15px;
     color: #777777;
-    border-color: #e6e6fa;
+    border-color: #777777;
 }
 
 .btn:hover {
@@ -155,6 +166,7 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 400px;
     width: 200px;
 }
 

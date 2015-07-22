@@ -37,7 +37,9 @@ namespace eStore.API
                     original.Name = product.Name;
                     original.Filling = product.Filling;
                     original.Fabric = product.Fabric;
+                    original.Color = product.Color;
                     original.Price = product.Price;
+                    original.WPrice = product.WPrice;
                     original.Description = product.Description;
                     original.InventoryDate = product.InventoryDate;
                     _db.SaveChanges();

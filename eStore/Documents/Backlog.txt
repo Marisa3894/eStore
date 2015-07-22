@@ -206,6 +206,10 @@ Add cancel / dismiss to Delete controller + $modalInstance
 change delete url:  enter ng-click 
 Add 
 
+<== SPINNER ADDED TO LOGIN MODAL ==>
+
+
+
 
 
 

@@ -16,7 +16,9 @@ namespace eStore.Migrations
                         Name = c.String(),
                         Filling = c.String(),
                         Fabric = c.String(),
+                        Color = c.String(),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        WPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
                         Description = c.String(),
                         InventoryDate = c.DateTime(nullable: false),
                     })

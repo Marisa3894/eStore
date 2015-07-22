@@ -203,13 +203,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201507112156489_initial.cs" />
-    <Compile Include="Migrations\201507112156489_initial.Designer.cs">
-      <DependentUpon>201507112156489_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201507220535447_resellerclaim.cs" />
-    <Compile Include="Migrations\201507220535447_resellerclaim.Designer.cs">
-      <DependentUpon>201507220535447_resellerclaim.cs</DependentUpon>
+    <Compile Include="Migrations\201507221751075_initial.cs" />
+    <Compile Include="Migrations\201507221751075_initial.Designer.cs">
+      <DependentUpon>201507221751075_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -239,23 +235,16 @@
     <Content Include="img\listItem\cube302.png" />
     <Content Include="img\listItem\cube402.png" />
     <Content Include="img\listItem\cube502.png" />
-    <Content Include="img\listItem\cube601.png" />
+    <Content Include="img\listItem\cube602.png" />
     <Content Include="img\listItem\zab100.png" />
-    <Content Include="img\listItem\zab101.png" />
     <Content Include="img\listItem\zab200.png" />
-    <Content Include="img\listItem\zab201.png" />
-    <Content Include="img\listItem\zab202.png" />
     <Content Include="img\listItem\zab212.png" />
     <Content Include="img\listItem\zab220.png" />
     <Content Include="img\listItem\zab300.png" />
-    <Content Include="img\listItem\zab301.png" />
     <Content Include="img\listItem\zab336.png" />
     <Content Include="img\listItem\zab400.png" />
-    <Content Include="img\listItem\zab401.png" />
     <Content Include="img\listItem\zab410.png" />
-    <Content Include="img\listItem\zab501.png" />
     <Content Include="img\listItem\zab600.png" />
-    <Content Include="img\listItem\zab601.png" />
     <Content Include="img\listItem\zabmini100.png" />
     <Content Include="img\listItem\zabmini200.png" />
     <Content Include="img\listItem\zabmini212.png" />
@@ -277,12 +266,9 @@
     <Content Include="img\listItem\zafu502.png" />
     <Content Include="img\listItem\zafu602.png" />
     <Content Include="img\LoadingWait.gif" />
-    <Content Include="img\loadspinner.gif" />
     <Content Include="img\LotusColor.png" />
     <Content Include="img\meditate.gif" />
     <Content Include="img\neckroll.png" />
-    <Content Include="img\neckrolloval.png" />
-    <Content Include="img\neckRollPillow.png" />
     <Content Include="img\productImg\mzabRedPrint.png" />
     <Content Include="img\productImg\neckroll_list.png" />
     <Content Include="img\productImg\zabPairBlue.png" />
@@ -291,8 +277,6 @@
     <Content Include="img\productImg\zafuTallBlue.png" />
     <Content Include="img\productImg\zafuTallRed.png" />
     <Content Include="img\stripebackground.png" />
-    <Content Include="img\zab.png" />
-    <Content Include="img\zafu3.png" />
     <Content Include="img\SNPC_colorLogoLg.png" />
     <Content Include="img\SNPC_colorLogoSm.png" />
     <Content Include="img\zafuBlue.png" />
@@ -394,11 +378,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201507112156489_initial.resx">
-      <DependentUpon>201507112156489_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201507220535447_resellerclaim.resx">
-      <DependentUpon>201507220535447_resellerclaim.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201507221751075_initial.resx">
+      <DependentUpon>201507221751075_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

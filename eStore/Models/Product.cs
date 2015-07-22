@@ -17,7 +17,11 @@ namespace eStore.Models
 
         public string Fabric { get; set; }
 
+        public string Color { get; set; }
+
         public decimal Price { get; set; }
+
+        public decimal WPrice { get; set; }
 
         public string Description { get; set; }
 
