@@ -185,7 +185,7 @@
 
         self.remove = function () {
             Product.remove({ id: productId }).$promise.then(function () {
-                $modalInstance.close('cancel');
+                //$modalInstance.close('cancel');
                 // band-aid
                 // 1. use a service to communicate with the list controller
                 // 2. use $rootScope to communicate with the list controller
@@ -193,8 +193,10 @@
                 // Ideal - move into directive
                 location.reload();
             }, function () {
-                //alert(['Product deletion failed.'])
+                //alert(['Product deletion failed.']) 
+                $modalInstance.close('cancel');
             });
+           
         }
 
         self.redirect = function () {

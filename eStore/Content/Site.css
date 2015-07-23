@@ -464,7 +464,7 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
 }
 
 /* Media queries */
-@media (max-width: 450px ) {
+@media (max-width: 500px ) {
     #navbarLogoLg {
         display: none;
         padding:0;
@@ -477,14 +477,14 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     }
 }
 
-@media(min-width: 450px) {
+@media(min-width: 500px) {
     #navbarLogoSm {
         display: none;
         width: 50px;
     }
 }
 
-@media (max-width: 450px ) {
+@media (max-width: 500px ) {
     #modalLogoLg {
         width: 75%;
         display: none;
@@ -496,7 +496,7 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     }
 }
 
-@media(min-width: 450px) {
+@media(min-width: 500px) {
     #modalLogoSm {
         display: none;
         width: 60px;
