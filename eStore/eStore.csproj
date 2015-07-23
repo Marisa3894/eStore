@@ -269,6 +269,12 @@
     <Content Include="img\LoadingWait.gif" />
     <Content Include="img\LotusColor.png" />
     <Content Include="img\meditate.gif" />
+    <Content Include="img\neckPg\neckmodel.jpg" />
+    <Content Include="img\neckPg\neckpillow1.png" />
+    <Content Include="img\neckPg\neckpillow2.png" />
+    <Content Include="img\neckPg\neckpillow3.png" />
+    <Content Include="img\neckPg\neckroll1.png" />
+    <Content Include="img\neckPg\neckroll2.png" />
     <Content Include="img\neckroll.png" />
     <Content Include="img\neckrollbuckwheat.png" />
     <Content Include="img\productImg\mzabRedPrint.png" />
@@ -276,16 +282,12 @@
     <Content Include="img\productImg\zabPairBlue.png" />
     <Content Include="img\productImg\zafuBlue.png" />
     <Content Include="img\productImg\zafuRedPrint.png" />
-    <Content Include="img\productImg\zafuTallBlue.png" />
-    <Content Include="img\productImg\zafuTallRed.png" />
     <Content Include="img\stripebackground.png" />
     <Content Include="img\SNPC_colorLogoLg.png" />
     <Content Include="img\SNPC_colorLogoSm.png" />
     <Content Include="img\zafuBlue.png" />
     <Content Include="img\zafubuckwheat.png" />
     <Content Include="img\zafuRedPrint.png" />
-    <Content Include="img\zafuTallBlue.png" />
-    <Content Include="img\zafuTallRed.png" />
     <Content Include="img\zafuzab.png" />
     <Content Include="ngApps\app.js" />
     <Content Include="ngApps\controllers.js" />
@@ -303,7 +305,6 @@
     <Content Include="ngViews\neckrollPillow.html" />
     <Content Include="ngViews\register.html" />
     <Content Include="ngViews\comingSoon.html" />
-    <Content Include="ngViews\zab.html" />
     <Content Include="ngViews\zafuZab.html" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-resource.js" />
@@ -372,6 +373,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="img\coverPg\" />
+    <Folder Include="img\zabPg\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

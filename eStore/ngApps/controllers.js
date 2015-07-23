@@ -16,6 +16,11 @@
                 controllerAs: 'loginC',
             })
         };
+
+        // slide carousel
+        self.myInterval = 3000;
+        self.slides = [{ image: '/img/neckPg/neckpillow1.png' }, { image: '/img/neckPg/neckpillow2.png' }, { image: '/img/neckPg/neckpillow3.png' }, { image: '/img/neckPg/neckroll1.png' }, { image: '/img/neckPg/neckroll2.png' }];
+
     });
 
     //USER LOGIN & CLAIMS CONTROLLER

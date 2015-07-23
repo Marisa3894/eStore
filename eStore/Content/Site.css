@@ -50,9 +50,12 @@ h4 {
 }
 
 .addPg img, .detailsPg img, .editPg img, .deletePg img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 50px;
     padding-bottom: 50px;
-    width: 300px;
+    width: 250px;
 }
 
 .deletePg {
@@ -121,10 +124,8 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
 
 .btn {
     text-shadow: none;
-    padding: 16px 15px 14px 15px;
     color: #777777;
     border-color: #777777;
-   
 }
 
 .btn:hover {
@@ -214,8 +215,10 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     width: 30%;
 }
 
-.errorPg {}
+#modelzab {
+   height: 250px;
 
+}
 
 .errorPg p {
     padding-left: 50px;
@@ -231,6 +234,61 @@ textarea:focus, input:focus, .uneditable-input:focus, .form-control:focus {
     margin-right: auto;
     border-radius: 20px;
     width: 200px;
+}
+
+.fabricSwatch {
+    text-align: center;
+}
+
+.fabricSwatch img {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    padding: 20px;
+}
+
+.carousel {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-control {
+   width: 0;
+}
+.carousel-control:hover {
+   color: none;
+   opacity: 0;
+}
+
+.glyphicon {
+    color: transparent;
+    text-shadow: none;
+    background-color: none;
+}
+
+.divWhite {
+    padding: 40px 10px;
+    min-height: 250px;
+    font-size: 1.4em;
+}
+
+.lightgray  {
+    padding: 40px 10px;
+    background-color: #f0f0f0;
+    background-size: cover;
+    padding: 40px 10px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.lightgray  {
+    background-color: #f0f0f0;
+    background-size: cover;
+    padding: 40px 10px;
+    min-height: 250px;
+    font-size: 1.4em;
 }
 
 .lightgray1 {
