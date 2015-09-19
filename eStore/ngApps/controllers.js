@@ -179,7 +179,6 @@
             $modalInstance.close('cancel');
         };
 
-
         var Product = $resource(PROD_API);
         self.product = Product.get({ id: productId });
 

@@ -19,7 +19,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label">name:</label>
                         <div class="col-sm-9">
-                            <select class="form-control" id="select" ng-model="addC.product.name">
+                            <select class="form-control" id="select" ng-model="addC.newProduct.name">
                                 <option>{{addC.newProduct.name}}</option>
                                 <option>zafu</option>
                                 <option>cube</option>
@@ -33,7 +33,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label">fabric:</label>
                         <div class="col-sm-9">
-                            <select class="form-control" id="select" ng-model="addC.product.fabric">
+                            <select class="form-control" id="select" ng-model="addC.newProduct.fabric">
                                 <option>{{addC.newProduct.fabric}}</option>
                                 <option>print</option>
                                 <option>solid</option>
@@ -42,9 +42,27 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="col-sm-3 control-label">color:</label>
+                        <div class="col-sm-9">
+                            <select class="form-control" id="select" ng-model="addC.newProduct.color">
+                                <option>{{addC.newProduct.color}}</option>
+                                <option>blue</option>
+                                <option>blue/natural</option>
+                                <option>blue/putty</option>
+                                <option>jadegray</option>
+                                <option>jadegray/blue</option>
+                                <option>paprika</option>
+                                <option>paprika/putty</option>
+                                <option>putty</option>
+                                <option>straw</option>
+                                <option>straw/natural</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label class="col-sm-3 control-label">filling</label>
                         <div class="col-sm-9">
-                            <select class="form-control" id="select" ng-model="addC.product.filling">
+                            <select class="form-control" id="select" ng-model="addC.newProduct.filling">
                                 <option>{{addC.newProduct.filling}}</option>
                                 <option>buckwheat hulls</option>
                                 <option>cotton batting</option>
